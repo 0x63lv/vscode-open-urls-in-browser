@@ -2,13 +2,15 @@
   "name": "open-urls-in-browser",
   "displayName": "Open URLs in browser",
   "description": "Open all URLs in the selected text block in the default browser",
+  "keywords": ["url", "browser", "text", "open"],
   "icon": "images/icon.png",
   "version": "0.0.1",
   "author": {
     "name": "a3s"
   },
+  "publisher": "a3s",
   "engines": {
-    "vscode": "^1.0.0"
+    "vscode": "^1.81.0"
   },
   "categories": [
     "Other"
@@ -16,6 +18,15 @@
   "galleryBanner": {
     "color": "#1F3C7C",
     "theme": "dark"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/0x63lv/vscode-open-urls-in-browser/blob/main/README.md",
+  "bugs": {
+    "url": "https://github.com/0x63lv/vscode-open-urls-in-browser/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/0x63lv/vscode-open-urls-in-browser.git"
   },
   "activationEvents": [],
   "main": "./extension.js",
