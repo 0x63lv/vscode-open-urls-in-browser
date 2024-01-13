@@ -1,0 +1,46 @@
+{
+  "name": "open-urls-in-browser",
+  "displayName": "Open URLs in browser",
+  "description": "Open all URLs in the selected text block in the default browser",
+  "icon": "images/icon.png",
+  "version": "0.0.1",
+  "author": {
+    "name": "a3s"
+  },
+  "engines": {
+    "vscode": "^1.0.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "galleryBanner": {
+    "color": "#1F3C7C",
+    "theme": "dark"
+  },
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [{
+      "command": "open-urls-in-browser.open",
+      "title": "Open URLs in browser"
+    }]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.81.0",
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "20.2.5",
+    "eslint": "^8.41.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "typescript": "^5.1.3",
+    "@vscode/test-electron": "^2.3.2",
+    "opn": "^5.0.0",
+    "x-default-browser": "^0.4.0"
+  }
+}
