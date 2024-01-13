@@ -1,5 +1,6 @@
+
 const vscode = require('vscode');
-const opn = require('opn');
+const opn = require('open');
 const platform = require('os').platform();
 const defaultBrowser = require('x-default-browser');
 

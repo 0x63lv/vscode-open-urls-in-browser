@@ -2,9 +2,14 @@
   "name": "open-urls-in-browser",
   "displayName": "Open URLs in browser",
   "description": "Open all URLs in the selected text block in the default browser",
-  "keywords": ["url", "browser", "text", "open"],
+  "keywords": [
+    "url",
+    "browser",
+    "text",
+    "open"
+  ],
   "icon": "images/icon.png",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": {
     "name": "a3s"
   },
@@ -28,30 +33,33 @@
     "type": "git",
     "url": "https://github.com/0x63lv/vscode-open-urls-in-browser.git"
   },
-  "activationEvents": [],
   "main": "./extension.js",
+  "activationEvents": [],
   "contributes": {
-    "commands": [{
-      "command": "open-urls-in-browser.open",
-      "title": "Open URLs in browser"
-    }]
+    "commands": [
+      {
+        "command": "open-urls-in-browser.open",
+        "title": "Open URLs in browser"
+      }
+    ]
   },
   "scripts": {
     "lint": "eslint .",
     "pretest": "npm run lint",
     "test": "node ./test/runTest.js"
   },
+  "dependencies": {
+    "open": "^6.0.0",
+    "x-default-browser": "^0.4.0"
+  },
   "devDependencies": {
-    "@types/vscode": "^1.81.0",
     "@types/glob": "^8.1.0",
     "@types/mocha": "^10.0.1",
-    "@types/node": "20.2.5",
+    "@types/vscode": "^1.81.0",
+    "@vscode/test-electron": "^2.3.2",
+    "esbuild": "^0.19.11",
     "eslint": "^8.41.0",
     "glob": "^8.1.0",
-    "mocha": "^10.2.0",
-    "typescript": "^5.1.3",
-    "@vscode/test-electron": "^2.3.2",
-    "opn": "^5.0.0",
-    "x-default-browser": "^0.4.0"
+    "mocha": "^10.2.0"
   }
 }
