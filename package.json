@@ -9,7 +9,7 @@
     "open"
   ],
   "icon": "images/icon.png",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": {
     "name": "a3s"
   },
@@ -46,7 +46,12 @@
   "scripts": {
     "lint": "eslint .",
     "pretest": "npm run lint",
-    "test": "node ./test/runTest.js"
+    "test": "node ./test/runTest.js",
+    "vscode:prepublish": "npm run esbuild-base -- --minify",
+    "esbuild-base": "esbuild ./src/extension.js --bundle --outfile=extension.js --external:vscode --format=cjs --platform=node",
+    "esbuild": "npm run esbuild-base -- --sourcemap",
+    "esbuild-watch": "npm run esbuild-base -- --sourcemap --watch",
+    "test-compile": "tsc -p ./"
   },
   "dependencies": {
     "open": "^6.0.0",
